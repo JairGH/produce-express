@@ -1,14 +1,20 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React from "react";
+import { SafeAreaView, View } from "react-native";
 
-import SearchBar from '@/components/SearchBar'
+import SearchBar from "@/components/searchBar";
+import ProductCard from "@/components/productCard";
 
 const Orders = () => {
   return (
-    <View className="flex-1 justify-center items-center">
-      <SearchBar/>
-    </View>
-  )
-}
+    <SafeAreaView className="flex-1">
+      <View className="flex-0 justify-start items-center pb-6">
+        <SearchBar/>
+      </View>
+      <View>
+        <ProductCard/>
+      </View>
+    </SafeAreaView>
+  );
+};
 
-export default Orders
+export default Orders;
