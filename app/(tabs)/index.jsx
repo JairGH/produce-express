@@ -1,10 +1,10 @@
-import { View, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export default function Tab() {
+export default function App() {
   return (
-    <View className="flex-1 justify-center items-center">
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView className="bg-secondary h-full">
+      
+    </SafeAreaView>
   );
 }
 
