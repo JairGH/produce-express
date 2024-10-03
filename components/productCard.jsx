@@ -16,7 +16,7 @@ const ProductCard = () => {
     },
     {
       id: 2,
-      name: "Blue Berries",
+      name: "Blueberry",
       uri: "https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       price: 25.99,
     },
@@ -32,6 +32,7 @@ const ProductCard = () => {
       uri: "https://images.unsplash.com/photo-1565623513508-ffe2588e327c?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       price: 35.99,
     },
+   
   ];
 
   return (
