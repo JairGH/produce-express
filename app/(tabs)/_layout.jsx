@@ -21,7 +21,7 @@ export default function TabLayout() {
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
               icon={"home"}
-              color={"black"}
+              color={"#0da6f2"}
               name={"Home"}
               focused={focused}/>
             )
@@ -34,7 +34,7 @@ export default function TabLayout() {
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
               icon={"leaf"}
-              color={"black"}
+              color={"#0da6f2"}
               name={"Produce"}
               focused={focused}/>
             )
@@ -47,7 +47,7 @@ export default function TabLayout() {
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
               icon={"truck"}
-              color={"black"}
+              color={"#0da6f2"}
               name={"Orders"}
               focused={focused}/>
             )
@@ -60,7 +60,7 @@ export default function TabLayout() {
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
               icon={"user"}
-              color={"black"}
+              color={"#0da6f2"}
               name={"Account"}
               focused={focused}/>
             )

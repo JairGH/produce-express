@@ -9,7 +9,7 @@ const SearchBar = () => {
       <Heading className="text-info-600 leading-normal w-full" size="4xl">
         Start order
       </Heading>
-      <Input className="w-full rounded-lg h-12 mt-4">
+      <Input className="w-full rounded-lg h-14 mt-4">
         <InputSlot className="pl-3">
           <InputIcon as={SearchIcon} />
         </InputSlot>
