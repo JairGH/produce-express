@@ -2,6 +2,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 import { Text, View } from 'react-native';
 
+
 const TabIcon = ({ icon, name, color, focused}) => {
   return (
   <View className="items-center justify-center gap-1">

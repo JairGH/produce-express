@@ -6,6 +6,7 @@ import { View, Image } from "react-native";
 import { Heading } from "@/components/ui/heading";
 import { BadgeDollarSign } from "lucide-react-native";
 
+
 const ProductCard = () => {
   const data = [
     {
@@ -32,7 +33,18 @@ const ProductCard = () => {
       uri: "https://images.unsplash.com/photo-1565623513508-ffe2588e327c?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       price: 35.99,
     },
-   
+    {
+      id: 5,
+      name: "Green Apples",
+      uri: "https://plus.unsplash.com/premium_photo-1666877058935-27bb63df847a?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      price: 55.99,
+    },
+    {
+      id: 6,
+      name: "Pineapple",
+      uri: "https://images.unsplash.com/photo-1565623513508-ffe2588e327c?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      price: 35.99,
+    },
   ];
 
   return (
@@ -73,7 +85,7 @@ const ProductCard = () => {
             isDisabled={false}
             isPressed={false}
           >
-            <FabIcon as={BadgeDollarSign}  color="white" className="ml-2"/>
+            <FabIcon as={BadgeDollarSign} color="white" className="ml-2" />
             <FabLabel className="text-base ml-1">{product.price}</FabLabel>
           </Fab>
         </Box>
