@@ -14,7 +14,9 @@ const TabIcon = ({ icon, name, color, focused}) => {
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ headerShown: false, tabBarShowLabel: false}}>
+    <Tabs screenOptions={{ headerShown: false, tabBarShowLabel: false, tabBarStyle: {
+      backgroundColor: "#F2F2F2"
+    }}}>
         <Tabs.Screen
           name="index"
           options={{
