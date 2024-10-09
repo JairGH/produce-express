@@ -7,7 +7,7 @@ import { Heading } from "@/components/ui/heading";
 import { BadgeDollarSign } from "lucide-react-native";
 
 
-const ProductCard = ({data, onPress}) => {
+const ProductCard = ({data, onPress, children}) => {
   return (
     <View className="flex flex-row justify-evenly flex-wrap gap-4 mb-8">
       {data.map((product) => (
@@ -43,6 +43,7 @@ const ProductCard = ({data, onPress}) => {
           </Fab>
         </Box>
       ))}
+      {children}
     </View>
   );
 };

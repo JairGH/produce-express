@@ -1,12 +1,13 @@
-import { Text, View } from 'react-native'
-import React from 'react'
+import React from "react";
+import { View } from "react-native";
+
+
 
 const Produce = () => {
   return (
-    <View className="flex-1 justify-center items-center">
-      <Text>Produce</Text>
+    <View className="flex-1 bg-black">
     </View>
-  )
-}
+  );
+};
 
-export default Produce
+export default Produce;

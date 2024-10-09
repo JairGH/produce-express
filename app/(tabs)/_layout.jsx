@@ -1,74 +1,73 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Tabs } from 'expo-router';
-import { Text, View } from 'react-native';
+import { Tabs } from "expo-router";
+import { Text, View } from "react-native";
+import { House, Leaf, ReceiptText, ChefHat } from "lucide-react-native";
 
-
-const TabIcon = ({ icon, name, color, focused}) => {
+const TabIcon = ({ name, focused, children }) => {
   return (
-  <View className="items-center justify-center gap-1">
-    <FontAwesome className="w-6 h-6" size={28} name={icon} color={color}/>
-    <Text className={`${focused ? "font-semibold" : "font-normal"} text-xs`}>{name}</Text>
-  </View>
-  )
-}
+    <View className="items-center justify-center gap-1">
+      {children}
+      <Text className={`${focused ? "font-semibold" : "font-normal"} text-xs`}>
+        {name}
+      </Text>
+    </View>
+  );
+};
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ headerShown: false, tabBarShowLabel: false, tabBarStyle: {
-      backgroundColor: "#F2F2F2"
-    }}}>
-        <Tabs.Screen
-          name="index"
-          options={{
-            title: 'Home',
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-              icon={"home"}
-              color={"#0da6f2"}
-              name={"Home"}
-              focused={focused}/>
-            )
-          }}
-        />
-        <Tabs.Screen
-          name="produce"
-          options={{
-            title: 'Produce',
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-              icon={"leaf"}
-              color={"#0da6f2"}
-              name={"Produce"}
-              focused={focused}/>
-            )
-          }}
-        />
-          <Tabs.Screen
-          name="orders"
-          options={{
-            title: 'Orders',
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-              icon={"truck"}
-              color={"#0da6f2"}
-              name={"Orders"}
-              focused={focused}/>
-            )
-          }}
-        />
-            <Tabs.Screen
-          name="account"
-          options={{
-            title: 'Account',
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-              icon={"user"}
-              color={"#0da6f2"}
-              name={"Account"}
-              focused={focused}/>
-            )
-          }}
-        />
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: "#F2F2F2",
+        },
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          tabBarIcon: ({ focused }) => (
+            <TabIcon name={"Home"} focused={focused}>
+              <House />
+            </TabIcon>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="orders"
+        options={{
+          title: "Orders",
+          tabBarIcon: ({focused }) => (
+            <TabIcon name={"Order"} focused={focused}>
+              <Leaf/>
+            </TabIcon>
+          ),
+        }}
+      />
+      <Tabs.Screen
+         name="produce"
+         options={{
+           title: "Produce",
+          tabBarIcon: ({focused }) => (
+            <TabIcon name={"Logs"} focused={focused}>
+              <ReceiptText/>
+            </TabIcon>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="account"
+        options={{
+          title: "Account",
+          tabBarIcon: ({focused }) => (
+            <TabIcon name={"Account"} focused={focused}>
+              <ChefHat/>
+            </TabIcon>
+          ),
+        }}
+      />
     </Tabs>
   );
 }

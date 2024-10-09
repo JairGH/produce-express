@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef} from "react";
 import { SafeAreaView, ScrollView, View } from "react-native";
 
-import SearchBar from "@/components/searchBar";
-import ProductCard from "@/components/productCard";
-import Cart from "@/components/cart";
+import Cart from "@/components/Cart";
+import ProductCard from "@/components/ProductCard";
+import SearchBar from "@/components/SearchBar";
+
+
 
 const Orders = () => {
   const data = [
@@ -45,20 +47,22 @@ const Orders = () => {
     },
   ];
   const [items, setItems] = useState(0);
+  const bottomSheetRef = useRef(null);
 
   const addItem = () => {
     setItems((prevItems) => prevItems + 1);
   };
+
   return (
     <SafeAreaView className="flex-1">
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+      <ScrollView contentContainerStyle={{ flexGrow: 1}}>
         <View className="flex-0 justify-start items-center pb-6">
-          <SearchBar />
+         <SearchBar/>
         </View>
-        <ProductCard data={data} onPress={addItem}/>
+      <ProductCard data={data} onPress={addItem}/>
       </ScrollView>
       <View className="absolute bottom-0 ml-32 justify-center items-center">
-        <Cart items={items}/>
+        <Cart/>
       </View>
     </SafeAreaView>
   );
